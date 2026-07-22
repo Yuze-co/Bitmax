@@ -125,4 +125,16 @@ button.style.transform="translateY(0) scale(1)";
 console.log("%cBITMAX 3.0","color:#3B82F6;font-size:24px;font-weight:bold;");
 
 console.log("Web desarrollada por Bitmax.");
+// ==========================
+// Menú móvil
+// ==========================
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
+});
 
