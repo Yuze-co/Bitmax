@@ -1130,4 +1130,30 @@ background:#3B82F6;
     transform .05s linear;
 
 }
+/* ========================= */
+/* HERO 3D */
+/* ========================= */
 
+.hero{
+
+    perspective:1200px;
+
+}
+
+.hero-image{
+
+    transition:transform .25s ease;
+
+    transform-style:preserve-3d;
+
+}
+
+.hero-image img{
+
+    border-radius:20px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 60px rgba(37,99,235,.18);
+
+}
