@@ -1068,3 +1068,22 @@ background:#3B82F6;
 }
 
 }
+/* Animación hamburguesa */
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:translateY(9px) rotate(45deg);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:translateY(-9px) rotate(-45deg);
+
+}
