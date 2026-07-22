@@ -1,13 +1,11 @@
 /* ========================= */
 /* RESET */
 /* ========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 html{
     scroll-behavior:smooth;
 }
@@ -18,22 +16,17 @@ body{
     color:#fff;
     overflow-x:hidden;
 }
-
 /* ========================= */
 /* COLORES */
 /* ========================= */
-
 :root{
-
     --primary:#2563EB;
     --secondary:#3B82F6;
     --dark:#050816;
     --dark2:#0B1120;
     --text:#ffffff;
     --gray:#CBD5E1;
-
 }
-
 /* ========================= */
 /* FONDO */
 /* ========================= */
