@@ -139,3 +139,44 @@ menuToggle.addEventListener("click",()=>{
     navLinks.classList.toggle("active");
 
 });
+tsParticles.load("particles-js",{
+
+    background:{
+        color:"transparent"
+    },
+
+    fpsLimit:60,
+
+    particles:{
+
+        number:{
+            value:45
+        },
+
+        color:{
+            value:"#3B82F6"
+        },
+
+        links:{
+            enable:true,
+            color:"#2563EB",
+            distance:170,
+            opacity:.25
+        },
+
+        move:{
+            enable:true,
+            speed:1
+        },
+
+        opacity:{
+            value:.4
+        },
+
+        size:{
+            value:2
+        }
+
+    }
+
+});
