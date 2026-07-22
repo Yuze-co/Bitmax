@@ -1099,3 +1099,34 @@ background:#3B82F6;
     z-index:-3;
 
 }
+/* ========================= */
+/* LUZ DEL RATÓN */
+/* ========================= */
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.22) 0%,
+    rgba(37,99,235,.12) 35%,
+    transparent 70%);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+
+    filter:blur(30px);
+
+    transition:
+    transform .05s linear;
+
+}
