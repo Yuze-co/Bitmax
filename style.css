@@ -166,8 +166,7 @@ body::after{
     filter:blur(30px);
 
     z-index:-1;
-
-}
+  ]
 /*==================================================
                     HEADER
 ==================================================*/
@@ -459,7 +458,7 @@ body::after{
     translateY(-9px)
     rotate(-45deg);
 
-}
+]
 /*==================================================
                     HERO
 ==================================================*/
@@ -828,63 +827,8 @@ body::after{
 
     }
 
-]
-  /*=========================================
-            HERO REVEAL
-=========================================*/
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(35px);
-
-    animation:heroReveal .8s forwards;
-
 }
-
-.reveal-1{
-
-    animation-delay:.15s;
-
-}
-
-.reveal-2{
-
-    animation-delay:.35s;
-
-}
-
-.reveal-3{
-
-    animation-delay:.55s;
-
-}
-
-.reveal-4{
-
-    animation-delay:.75s;
-
-}
-
-.reveal-5{
-
-    animation-delay:.95s;
-
-}
-
-@keyframes heroReveal{
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-/*==================================================
+  /*==================================================
                 TÍTULOS DE SECCIÓN
 ==================================================*/
 
@@ -976,24 +920,40 @@ body::after{
 }
 
 .about-icon{
-.about-icon{
 
     width:70px;
+
     height:70px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
+    font-size:2rem;
 
     margin-bottom:25px;
 
     border-radius:18px;
 
-    background:rgba(37,99,235,.12);
+    background:rgba(37,99,235,.15);
 
-    border:1px solid rgba(37,99,235,.18);
+}
 
-    transition:all .35s ease;
+.about-card h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+}
+
+.about-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
 
 }
 
@@ -1041,54 +1001,46 @@ body::after{
     box-shadow:0 20px 45px rgba(37,99,235,.20);
 
 }
-.about-card:hover .about-icon,
-.service-card:hover .service-icon{
 
-    background:#2563EB;
-
-    transform:translateY(-5px);
-
-}
-
-.about-card:hover .about-icon i,
-.service-card:hover .service-icon i{
-
-    color:white;
-
-    transform:scale(1.15);
-
-}
 .service-icon{
-  .service-icon{
 
     width:70px;
+
     height:70px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     margin-bottom:25px;
 
     border-radius:18px;
 
-    background:rgba(37,99,235,.12);
+    background:rgba(37,99,235,.15);
 
-    border:1px solid rgba(37,99,235,.18);
-
-    transition:all .35s ease;
+    font-size:2rem;
 
 }
-.about-icon i,
-.service-icon i{
 
-    font-size:30px;
+.service-card h3{
 
-    color:#3B82F6;
+    font-size:1.7rem;
 
-    transition:all .35s ease;
+    margin-bottom:18px;
 
 }
+
+.service-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+
 /*==================================================
                 CÓMO TRABAJAMOS
 ==================================================*/
@@ -1170,7 +1122,7 @@ body::after{
     line-height:1.8;
 
 }
-/*==================================================
+  /*==================================================
                     CONTACTO
 ==================================================*/
 
@@ -1383,7 +1335,7 @@ footer small{
     background:var(--secondary);
 
 }
-/*==================================================
+  /*==================================================
                 RESPONSIVE
 ==================================================*/
 
