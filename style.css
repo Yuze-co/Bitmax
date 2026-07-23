@@ -828,6 +828,61 @@ body::after{
 
     }
 
+]
+  /*=========================================
+            HERO REVEAL
+=========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    animation:heroReveal .8s forwards;
+
+}
+
+.reveal-1{
+
+    animation-delay:.15s;
+
+}
+
+.reveal-2{
+
+    animation-delay:.35s;
+
+}
+
+.reveal-3{
+
+    animation-delay:.55s;
+
+}
+
+.reveal-4{
+
+    animation-delay:.75s;
+
+}
+
+.reveal-5{
+
+    animation-delay:.95s;
+
+}
+
+@keyframes heroReveal{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 /*==================================================
                 TÍTULOS DE SECCIÓN
