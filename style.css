@@ -1382,3 +1382,69 @@ width:55%;
     border-radius:20px;
 
 }
+/* ===========================
+   SERVICE CARD V2
+=========================== */
+
+.service-card{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.service-icon{
+
+    width:70px;
+    height:70px;
+
+    margin-bottom:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+
+    border-radius:18px;
+
+    background:rgba(37,99,235,.15);
+
+    transition:.35s;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        130deg,
+        transparent,
+        rgba(37,99,235,.08),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.service-card:hover::before{
+
+    opacity:1;
+
+}
+
+.service-card:hover .service-icon{
+
+    transform:rotate(-8deg) scale(1.12);
+
+    background:#2563EB;
+
+}
