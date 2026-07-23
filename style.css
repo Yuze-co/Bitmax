@@ -921,6 +921,11 @@ body::after{
 }
 
 .about-icon{
+font-size:30px;
+
+    color:#3B82F6;
+
+    transition:.35s;
 
     width:70px;
 
@@ -1004,6 +1009,11 @@ body::after{
 }
 
 .service-icon{
+  font-size:30px;
+
+    color:#3B82F6;
+
+    transition:.35s;
 
     width:70px;
 
