@@ -390,21 +390,45 @@
 
             </div>
 
-            <div class="contact-buttons">
+            <form class="contact-form"
+      action="https://formspree.io/f/mkodqrlq"
+      method="POST">
 
-                <a href="#" class="btn-primary">
+    <input
+        type="text"
+        name="name"
+        placeholder="Tu nombre"
+        required>
 
-                    Solicitar presupuesto
+    <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required>
 
-                </a>
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Cuéntame tu proyecto..."
+        required></textarea>
 
-                <a href="#" class="btn-secondary">
+    <button type="submit" class="btn-primary">
+        Solicitar presupuesto
+    </button>
 
-                    Hablar por WhatsApp
+</form>
 
-                </a>
+<div class="contact-buttons">
 
-            </div>
+    <a href="https://wa.me/TUNUMERO"
+       class="btn-secondary"
+       target="_blank">
+
+        Hablar por WhatsApp
+
+    </a>
+
+</div>
 
         </section>
                 <!-- ================= FOOTER ================= -->
