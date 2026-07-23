@@ -528,13 +528,13 @@ transform:translateY(-18px);
 /* ========================= */
 /* SERVICIOS */
 /* ========================= */
-   .services{
+   ..services{
 
     max-width:1200px;
 
     margin:auto;
 
-    padding:120px 25px;
+    padding:120px 30px;
 
 }
 .services-grid{
@@ -544,6 +544,8 @@ transform:translateY(-18px);
     grid-template-columns:repeat(3,1fr);
 
     gap:30px;
+
+}
 
 }
 
