@@ -855,7 +855,71 @@ footer small{
 }
 
 @media(max-width:768px){
+/* ========================= */
+/* HERO MÓVIL */
+/* ========================= */
 
+.hero{
+
+    padding:130px 20px 70px;
+
+    gap:40px;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.laptop{
+
+    width:100%;
+
+    max-width:340px;
+
+}
+
+.screen-content{
+
+    padding:25px;
+
+}
+
+.screen-content h2{
+
+    font-size:28px;
+
+}
+
+.screen-content p{
+
+    font-size:14px;
+
+}
+
+.screen-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    font-size:14px;
+
+}
+
+.base{
+
+    width:105%;
+
+    max-width:360px;
+
+}
 .hero h1{
 
     font-size:42px;
