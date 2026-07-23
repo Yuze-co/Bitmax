@@ -394,29 +394,56 @@
       action="https://formspree.io/f/mkodqrlq"
       method="POST">
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Tu nombre"
-        required>
+    <div class="input-group">
+        <input type="text" name="name" placeholder="Nombre completo" required>
+    </div>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Tu correo electrónico"
-        required>
+    <div class="input-group">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+    </div>
 
-    <textarea
-        name="message"
-        rows="6"
-        placeholder="Cuéntame tu proyecto..."
-        required></textarea>
+    <div class="input-group">
+        <input type="tel" name="phone" placeholder="Teléfono (opcional)">
+    </div>
+
+    <div class="input-group">
+        <input type="text" name="business" placeholder="Nombre del negocio">
+    </div>
+
+    <div class="input-group">
+        <select name="service" required>
+            <option value="">¿Qué necesitas?</option>
+            <option>Landing Page</option>
+            <option>Página Web</option>
+            <option>Tienda Online</option>
+            <option>Rediseño Web</option>
+            <option>No estoy seguro</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <select name="budget">
+            <option value="">Presupuesto aproximado</option>
+            <option>Menos de 300 €</option>
+            <option>300 € - 600 €</option>
+            <option>600 € - 1000 €</option>
+            <option>Más de 1000 €</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Cuéntame tu proyecto..."
+            required></textarea>
+    </div>
 
     <button type="submit" class="btn-primary">
-        Solicitar presupuesto
+        🚀 Solicitar presupuesto
     </button>
 
-</form>
+            </form>
 
 <div class="contact-buttons">
 
