@@ -921,45 +921,24 @@ body::after{
 }
 
 .about-icon{
-font-size:30px;
-
-    color:#3B82F6;
-
-    transition:.35s;
+.about-icon{
 
     width:70px;
-
     height:70px;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    font-size:2rem;
 
     margin-bottom:25px;
 
     border-radius:18px;
 
-    background:rgba(37,99,235,.15);
+    background:rgba(37,99,235,.12);
 
-}
+    border:1px solid rgba(37,99,235,.18);
 
-.about-card h3{
-
-    font-size:1.6rem;
-
-    margin-bottom:15px;
-
-}
-
-.about-card p{
-
-    color:var(--gray);
-
-    line-height:1.8;
+    transition:all .35s ease;
 
 }
 
@@ -1007,51 +986,54 @@ font-size:30px;
     box-shadow:0 20px 45px rgba(37,99,235,.20);
 
 }
+.about-card:hover .about-icon,
+.service-card:hover .service-icon{
 
+    background:#2563EB;
+
+    transform:translateY(-5px);
+
+}
+
+.about-card:hover .about-icon i,
+.service-card:hover .service-icon i{
+
+    color:white;
+
+    transform:scale(1.15);
+
+}
 .service-icon{
-  font-size:30px;
-
-    color:#3B82F6;
-
-    transition:.35s;
+  .service-icon{
 
     width:70px;
-
     height:70px;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     margin-bottom:25px;
 
     border-radius:18px;
 
-    background:rgba(37,99,235,.15);
+    background:rgba(37,99,235,.12);
 
-    font-size:2rem;
+    border:1px solid rgba(37,99,235,.18);
 
-}
-
-.service-card h3{
-
-    font-size:1.7rem;
-
-    margin-bottom:18px;
+    transition:all .35s ease;
 
 }
+.about-icon i,
+.service-icon i{
 
-.service-card p{
+    font-size:30px;
 
-    color:var(--gray);
+    color:#3B82F6;
 
-    line-height:1.8;
+    transition:all .35s ease;
 
 }
-
-
 /*==================================================
                 CÓMO TRABAJAMOS
 ==================================================*/
