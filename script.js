@@ -1,136 +1,45 @@
-// ==========================
-// BITMAX 3.0
-// ==========================
+/*==================================================
+                BITMAX 4.0
+==================================================*/
 
 
-// Navbar al hacer scroll
+/*==================================================
+                SELECTORES
+==================================================*/
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
+const menuToggle = document.getElementById("menu-toggle");
 
-    if (window.scrollY > 60) {
+const navLinks = document.querySelector(".nav-links");
 
-        header.style.background = "rgba(5,8,22,.95)";
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
+const heroImage = document.querySelector(".hero-image");
 
-    } else {
+const cursorGlow = document.querySelector(".cursor-glow");
 
-        header.style.background = "rgba(5,8,22,.70)";
-        header.style.boxShadow = "none";
+
+/*==================================================
+                HEADER SCROLL
+==================================================*/
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>50){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
 
     }
 
 });
 
 
-// ==========================
-// Animación al aparecer
-// ==========================
-
-const sections = document.querySelectorAll(
-".about,.services,.portfolio,.stats,.contact"
-);
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:0.2
-});
-
-sections.forEach(section=>{
-
-section.classList.add("hidden");
-
-observer.observe(section);
-
-});
-
-
-// ==========================
-// Botón volver arriba
-// ==========================
-
-const topButton = document.createElement("button");
-
-topButton.innerHTML = "↑";
-
-topButton.className = "top-button";
-
-document.body.appendChild(topButton);
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-topButton.classList.add("active");
-
-}else{
-
-topButton.classList.remove("active");
-
-}
-
-});
-
-topButton.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-
-// ==========================
-// Animación botones
-// ==========================
-
-document.querySelectorAll(".btn-primary,.btn-secondary,.nav-button")
-.forEach(button=>{
-
-button.addEventListener("mouseenter",()=>{
-
-button.style.transform="translateY(-4px) scale(1.03)";
-
-});
-
-button.addEventListener("mouseleave",()=>{
-
-button.style.transform="translateY(0) scale(1)";
-
-});
-
-});
-
-
-// ==========================
-// Mensaje consola
-// ==========================
-
-console.log("%cBITMAX 3.0","color:#3B82F6;font-size:24px;font-weight:bold;");
-
-console.log("Web desarrollada por Bitmax.");
-// ==========================
-// Menú móvil
-// ==========================
-
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+/*==================================================
+                MENÚ MÓVIL
+==================================================*/
 
 menuToggle.addEventListener("click",()=>{
 
@@ -139,6 +48,27 @@ menuToggle.addEventListener("click",()=>{
     navLinks.classList.toggle("active");
 
 });
+
+
+/*==================================================
+            CERRAR MENÚ AL PULSAR
+==================================================*/
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        menuToggle.classList.remove("active");
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+/*==================================================
+                PARTÍCULAS
+==================================================*/
+
 tsParticles.load("particles-js",{
 
     background:{
@@ -180,32 +110,137 @@ tsParticles.load("particles-js",{
     }
 
 });
-// ==========================
-// Luz que sigue al ratón
-// ==========================
 
-const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove",(e)=>{
-
-    glow.style.left = e.clientX + "px";
-
-    glow.style.top = e.clientY + "px";
-
-});
-// ==========================
-// Hero 3D
-// ==========================
-
-const heroImage = document.querySelector(".hero-image");
+/*==================================================
+            LUZ DEL RATÓN
+==================================================*/
 
 document.addEventListener("mousemove",(e)=>{
 
-    const x = (window.innerWidth/2 - e.clientX)/40;
+    cursorGlow.style.left = e.clientX + "px";
 
-    const y = (window.innerHeight/2 - e.clientY)/40;
-
-    heroImage.style.transform =
-    `rotateY(${-x}deg) rotateX(${y}deg)`;
+    cursorGlow.style.top = e.clientY + "px";
 
 });
+
+
+/*==================================================
+                HERO 3D
+==================================================*/
+
+document.addEventListener("mousemove",(e)=>{
+
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+    heroImage.style.transform = `
+        rotateY(${-x}deg)
+        rotateX(${y}deg)
+    `;
+
+});
+/*==================================================
+        ANIMACIONES AL HACER SCROLL
+==================================================*/
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+    threshold:.2
+});
+
+document.querySelectorAll(
+".about,.services,.process,.contact"
+).forEach(section=>{
+
+    section.classList.add("hidden");
+
+    observer.observe(section);
+
+});
+
+
+/*==================================================
+            BOTÓN VOLVER ARRIBA
+==================================================*/
+
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "↑";
+
+topButton.className = "top-button";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>500){
+
+        topButton.classList.add("active");
+
+    }else{
+
+        topButton.classList.remove("active");
+
+    }
+
+});
+
+topButton.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+
+/*==================================================
+            EFECTO PREMIUM BOTONES
+==================================================*/
+
+document.querySelectorAll(
+".btn-primary,.btn-secondary,.nav-button"
+).forEach(button=>{
+
+    button.addEventListener("mouseenter",()=>{
+
+        button.style.transform="translateY(-4px) scale(1.03)";
+
+    });
+
+    button.addEventListener("mouseleave",()=>{
+
+        button.style.transform="translateY(0) scale(1)";
+
+    });
+
+});
+
+
+/*==================================================
+                CONSOLA
+==================================================*/
+
+console.log(
+"%cBITMAX 4.0",
+"color:#3B82F6;font-size:24px;font-weight:bold;"
+);
+
+console.log("Diseñado y desarrollado por BitMax.");
