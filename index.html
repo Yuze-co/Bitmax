@@ -410,16 +410,54 @@
         <input type="text" name="business" placeholder="Nombre del negocio">
     </div>
 
-    <div class="input-group">
-        <select name="service" required>
-            <option value="">¿Qué necesitas?</option>
-            <option>Landing Page</option>
-            <option>Página Web</option>
-            <option>Tienda Online</option>
-            <option>Rediseño Web</option>
-            <option>No estoy seguro</option>
-        </select>
+   <div class="input-group">
+
+    <div class="custom-select" id="service-select">
+
+        <button type="button" class="select-btn">
+
+            <span class="selected-text">
+                ¿Qué necesitas?
+            </span>
+
+            <span class="arrow">
+                ▼
+            </span>
+
+        </button>
+
+        <div class="select-options">
+
+            <div class="option" data-value="Landing Page">
+                Landing Page
+            </div>
+
+            <div class="option" data-value="Página Web">
+                Página Web
+            </div>
+
+            <div class="option" data-value="Tienda Online">
+                Tienda Online
+            </div>
+
+            <div class="option" data-value="Rediseño Web">
+                Rediseño Web
+            </div>
+
+            <div class="option" data-value="No estoy seguro">
+                No estoy seguro
+            </div>
+
+        </div>
+
+        <input
+            type="hidden"
+            name="service"
+            required>
+
     </div>
+
+</div>
 
     <div class="input-group">
         <select name="budget">
