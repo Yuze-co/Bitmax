@@ -139,22 +139,6 @@ if (window.innerWidth > 768) {
 
 }
 /*==================================================
-                HERO 3D
-==================================================*/
-
-document.addEventListener("mousemove",(e)=>{
-
-    const x = (window.innerWidth / 2 - e.clientX) / 40;
-
-    const y = (window.innerHeight / 2 - e.clientY) / 40;
-
-    heroImage.style.transform = `
-        rotateY(${-x}deg)
-        rotateX(${y}deg)
-    `;
-
-});
-/*==================================================
         ANIMACIONES AL HACER SCROLL
 ==================================================*/
 
