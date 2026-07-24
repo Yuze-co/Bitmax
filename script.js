@@ -257,3 +257,44 @@ console.log(
 );
 
 console.log("Diseñado y desarrollado por BitMax.");
+/*==================================================
+            ENVÍO DEL FORMULARIO
+==================================================*/
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                Accept: "application/json"
+            }
+        });
+
+        if (response.ok) {
+
+            alert("✅ ¡Solicitud enviada correctamente! Te responderé lo antes posible.");
+
+            form.reset();
+
+        } else {
+
+            alert("❌ Ha ocurrido un error. Inténtalo de nuevo.");
+
+        }
+
+    } catch (error) {
+
+        alert("❌ No se ha podido conectar con el servidor.");
+
+    }
+
+});
