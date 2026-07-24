@@ -459,16 +459,49 @@
 
 </div>
 
-    <div class="input-group">
-        <select name="budget">
-            <option value="">Presupuesto aproximado</option>
-            <option>Menos de 300 €</option>
-            <option>300 € - 600 €</option>
-            <option>600 € - 1000 €</option>
-            <option>Más de 1000 €</option>
-        </select>
+  <div class="input-group">
+
+    <div class="custom-select" id="budget-select">
+
+        <button type="button" class="select-btn">
+
+            <span class="selected-text">
+                Presupuesto aproximado
+            </span>
+
+            <span class="arrow">
+                ▼
+            </span>
+
+        </button>
+
+        <div class="select-options">
+
+            <div class="option" data-value="Menos de 300 €">
+                Menos de 300 €
+            </div>
+
+            <div class="option" data-value="300 € - 600 €">
+                300 € - 600 €
+            </div>
+
+            <div class="option" data-value="600 € - 1000 €">
+                600 € - 1000 €
+            </div>
+
+            <div class="option" data-value="Más de 1000 €">
+                Más de 1000 €
+            </div>
+
+        </div>
+
+        <input
+            type="hidden"
+            name="budget">
+
     </div>
 
+</div>
     <div class="input-group">
         <textarea
             name="message"
