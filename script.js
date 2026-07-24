@@ -116,15 +116,28 @@ tsParticles.load("particles-js",{
             LUZ DEL RATÓN
 ==================================================*/
 
-document.addEventListener("mousemove",(e)=>{
+if (window.innerWidth > 768) {
 
-    cursorGlow.style.left = e.clientX + "px";
+    document.addEventListener("mousemove",(e)=>{
 
-    cursorGlow.style.top = e.clientY + "px";
+        cursorGlow.style.left = e.clientX + "px";
+        cursorGlow.style.top = e.clientY + "px";
 
-});
+    });
 
+    document.addEventListener("mousemove",(e)=>{
 
+        const x = (window.innerWidth / 2 - e.clientX) / 40;
+        const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+        heroImage.style.transform = `
+            rotateY(${-x}deg)
+            rotateX(${y}deg)
+        `;
+
+    });
+
+}
 /*==================================================
                 HERO 3D
 ==================================================*/
