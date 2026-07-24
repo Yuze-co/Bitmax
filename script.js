@@ -246,6 +246,7 @@ console.log("Diseñado y desarrollado por BitMax.");
 ==================================================*/
 
 const form = document.querySelector(".contact-form");
+const message = document.getElementById("form-message");
 
 form.addEventListener("submit", async (e) => {
 
@@ -253,33 +254,62 @@ form.addEventListener("submit", async (e) => {
 
     const data = new FormData(form);
 
-    try {
+    message.className = "form-message";
+    message.textContent = "";
 
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                Accept: "application/json"
+    try{
+
+        const response = await fetch(form.action,{
+
+            method:form.method,
+
+            body:data,
+
+            headers:{
+                Accept:"application/json"
             }
+
         });
 
-        if (response.ok) {
+        if(response.ok){
 
-            alert("✅ ¡Solicitud enviada correctamente! Te responderé lo antes posible.");
+            message.classList.add("show","success");
+
+            message.innerHTML = `
+                <strong>¡Solicitud enviada!</strong><br>
+                Gracias por confiar en BitMax.<br>
+                Me pondré en contacto contigo lo antes posible.
+            `;
 
             form.reset();
 
-        } else {
+        }else{
 
-            alert("❌ Ha ocurrido un error. Inténtalo de nuevo.");
+            message.classList.add("show","error");
+
+            message.innerHTML = `
+                <strong>No se ha podido enviar.</strong><br>
+                Inténtalo de nuevo en unos minutos.
+            `;
 
         }
 
-    } catch (error) {
+    }catch{
 
-        alert("❌ No se ha podido conectar con el servidor.");
+        message.classList.add("show","error");
+
+        message.innerHTML = `
+            <strong>Error de conexión.</strong><br>
+            Comprueba tu conexión a Internet.
+        `;
 
     }
+
+    setTimeout(()=>{
+
+        message.classList.remove("show");
+
+    },6000);
 
 });
 /*==================================================
