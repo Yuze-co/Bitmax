@@ -1187,17 +1187,19 @@ body::after{
 .contact-form select{
 
     cursor:pointer;
-.contact-form select option
-}
-    background:#0B1120;
+.contact-form select{
 
     color:#FFFFFF;
+    background:#0B1120;
+
 }
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus{
+.contact-form option{
 
+    color:#000000;
+    background:#FFFFFF;
+
+}
     outline:none;
 
     border-color:var(--primary);
