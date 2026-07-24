@@ -282,85 +282,57 @@ form.addEventListener("submit", async (e) => {
     }
 
 });
-/*==================== CUSTOM SELECT ====================*/
+/*==================================================
+            CUSTOM SELECTS
+==================================================*/
 
-const customSelect = document.querySelector("#service-select");
+document.querySelectorAll(".custom-select").forEach(select => {
 
-const selectBtn = customSelect.querySelector(".select-btn");
+    const button = select.querySelector(".select-btn");
+    const text = select.querySelector(".selected-text");
+    const hidden = select.querySelector("input");
+    const options = select.querySelectorAll(".option");
 
-const options = customSelect.querySelectorAll(".option");
+    button.addEventListener("click", (e) => {
 
-const selectedText = customSelect.querySelector(".selected-text");
+        e.stopPropagation();
 
-const hiddenInput = customSelect.querySelector("input");
+        document.querySelectorAll(".custom-select").forEach(item => {
 
-selectBtn.addEventListener("click", () => {
+            if(item !== select){
 
-    customSelect.classList.toggle("active");
+                item.classList.remove("active");
 
-});
+            }
 
-options.forEach(option => {
+        });
 
-    option.addEventListener("click", () => {
+        select.classList.toggle("active");
 
-        selectedText.textContent = option.textContent;
+    });
 
-        hiddenInput.value = option.dataset.value;
+    options.forEach(option => {
 
-        customSelect.classList.remove("active");
+        option.addEventListener("click", () => {
+
+            text.textContent = option.textContent;
+
+            hidden.value = option.dataset.value;
+
+            select.classList.remove("active");
+
+        });
 
     });
 
 });
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", () => {
 
-    if (!customSelect.contains(e.target)) {
+    document.querySelectorAll(".custom-select").forEach(select => {
 
-        customSelect.classList.remove("active");
-
-    }
-
-});
-/*==================== CUSTOM SELECT PRESUPUESTO ====================*/
-
-const budgetSelect = document.querySelector("#budget-select");
-
-const budgetBtn = budgetSelect.querySelector(".select-btn");
-
-const budgetOptions = budgetSelect.querySelectorAll(".option");
-
-const budgetText = budgetSelect.querySelector(".selected-text");
-
-const budgetInput = budgetSelect.querySelector("input");
-
-budgetBtn.addEventListener("click", () => {
-
-    budgetSelect.classList.toggle("active");
-
-});
-
-budgetOptions.forEach(option => {
-
-    option.addEventListener("click", () => {
-
-        budgetText.textContent = option.textContent;
-
-        budgetInput.value = option.dataset.value;
-
-        budgetSelect.classList.remove("active");
+        select.classList.remove("active");
 
     });
-
-});
-
-document.addEventListener("click", (e) => {
-
-    if (!budgetSelect.contains(e.target)) {
-
-        budgetSelect.classList.remove("active");
-
-    }
 
 });
