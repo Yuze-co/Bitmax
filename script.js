@@ -282,3 +282,44 @@ form.addEventListener("submit", async (e) => {
     }
 
 });
+/*==================== CUSTOM SELECT ====================*/
+
+const customSelect = document.querySelector("#service-select");
+
+const selectBtn = customSelect.querySelector(".select-btn");
+
+const options = customSelect.querySelectorAll(".option");
+
+const selectedText = customSelect.querySelector(".selected-text");
+
+const hiddenInput = customSelect.querySelector("input");
+
+selectBtn.addEventListener("click", () => {
+
+    customSelect.classList.toggle("active");
+
+});
+
+options.forEach(option => {
+
+    option.addEventListener("click", () => {
+
+        selectedText.textContent = option.textContent;
+
+        hiddenInput.value = option.dataset.value;
+
+        customSelect.classList.remove("active");
+
+    });
+
+});
+
+document.addEventListener("click", (e) => {
+
+    if (!customSelect.contains(e.target)) {
+
+        customSelect.classList.remove("active");
+
+    }
+
+});
