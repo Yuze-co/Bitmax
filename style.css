@@ -1656,3 +1656,112 @@ footer small{
     }
 
 }
+/*==================== CUSTOM SELECT ====================*/
+
+.custom-select{
+    position:relative;
+    width:100%;
+}
+
+.select-btn{
+    width:100%;
+    height:60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 22px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.select-btn:hover{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 20px rgba(37,99,235,.20);
+
+}
+
+.arrow{
+
+    transition:.3s;
+
+}
+
+.custom-select.active .arrow{
+
+    transform:rotate(180deg);
+
+}
+
+.select-options{
+
+    position:absolute;
+
+    top:calc(100% + 10px);
+
+    left:0;
+
+    width:100%;
+
+    background:#101826;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+
+.custom-select.active .select-options{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.option{
+
+    padding:18px 22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    color:#fff;
+
+}
+
+.option:hover{
+
+    background:rgba(37,99,235,.18);
+
+}
