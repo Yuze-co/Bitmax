@@ -1167,7 +1167,7 @@ body::after{
 
     backdrop-filter:blur(18px);
 
-    color:var(--white);
+    color:var(--blue);
 
     font-size:1rem;
 
