@@ -323,3 +323,44 @@ document.addEventListener("click", (e) => {
     }
 
 });
+/*==================== CUSTOM SELECT PRESUPUESTO ====================*/
+
+const budgetSelect = document.querySelector("#budget-select");
+
+const budgetBtn = budgetSelect.querySelector(".select-btn");
+
+const budgetOptions = budgetSelect.querySelectorAll(".option");
+
+const budgetText = budgetSelect.querySelector(".selected-text");
+
+const budgetInput = budgetSelect.querySelector("input");
+
+budgetBtn.addEventListener("click", () => {
+
+    budgetSelect.classList.toggle("active");
+
+});
+
+budgetOptions.forEach(option => {
+
+    option.addEventListener("click", () => {
+
+        budgetText.textContent = option.textContent;
+
+        budgetInput.value = option.dataset.value;
+
+        budgetSelect.classList.remove("active");
+
+    });
+
+});
+
+document.addEventListener("click", (e) => {
+
+    if (!budgetSelect.contains(e.target)) {
+
+        budgetSelect.classList.remove("active");
+
+    }
+
+});
